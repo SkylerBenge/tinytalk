@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-
-   def signin
+  helper :headshot
+  def signin
     if user_signed_in?
     redirect_to :index
     end
@@ -23,6 +23,12 @@ class HomeController < ApplicationController
     @user = current_user
     @user.update_attributes(params[:user])
     redirect_to :index
+  end
+
+  def headshot_post_save(file_path)
+    @headshot_photo = HeadshotPhoto.new
+    @headshot_photo.avatar = File.new(file_path)
+    @headshot_photo.save
   end
 
 end

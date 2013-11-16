@@ -10,6 +10,13 @@
     <%= f.hidden_field :board_id, value: @board.id %>
   </div>
 
+  <div id="headshot">
+    <%= headshot_default_config(Rails.application.config.session_options[:key], headshot_capture_path) %>
+    <%= headshot_camera %>
+    <br/>
+    <%= headshot_snap_button %>
+  </div>
+
   <div class="form-actions">
     <br>
     <%= f.button :submit, class: "btn btn-info" %>

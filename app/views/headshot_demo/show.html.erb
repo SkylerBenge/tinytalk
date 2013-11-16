@@ -1,0 +1,4 @@
+<h1>Headshots</h1>
+<%= Dir.glob("public/headshots/*.jpg") do |headshot| %>
+  <%= image_tag(headshot.gsub(/public/, '') ) %>
+<% end %>

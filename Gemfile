@@ -53,4 +53,4 @@ gem 'gon'
 ruby '2.0.0'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
-
+gem 'headshot'

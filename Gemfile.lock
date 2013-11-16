@@ -63,6 +63,7 @@ GEM
     gon (4.1.1)
       actionpack (>= 2.3.0)
       json
+    headshot (0.1.6)
     hike (1.2.3)
     i18n (0.6.5)
     journey (1.0.4)
@@ -173,6 +174,7 @@ DEPENDENCIES
   devise
   ejs
   gon
+  headshot
   jquery-rails
   paperclip (~> 3.0)
   pg

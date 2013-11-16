@@ -12,6 +12,14 @@
   <%= form.submit %>
   <% end %>
 </div>
+<div id="headshot">
+  <%= headshot_default_config(Rails.application.config.session_options[:key], headshot_capture_path) %>
+  <%= headshot_camera %>
+  <br/>
+
+  <button class="snap" name="button" onclick="headshotHandlers.snap()" type="submit">Snap</button>
+
+</div>
 
 <%= @user.email %></br>
 <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">

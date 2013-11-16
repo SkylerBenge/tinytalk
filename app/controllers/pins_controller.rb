@@ -1,4 +1,5 @@
 class PinsController < ApplicationController
+  helper :headshot
   before_filter :authenticate_user!, except: [:index]
   # GET /pins
   # GET /pins.json
@@ -90,5 +91,11 @@ class PinsController < ApplicationController
       format.html { redirect_to board_path(@board)}
       format.json { head :no_content }
     end
+  end
+
+  def headshot_post_save(file_path)
+    @headshot_photo = HeadshotPhoto.new
+    @headshot_photo.image = File.new(file_path)
+    @headshot_photo.save
   end
 end
